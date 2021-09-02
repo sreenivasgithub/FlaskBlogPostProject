@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{%  block content %}
+<div class="">
+    <form method="POST", action="">
+        {{ form.hidden_tag() }}
+        <h2>{{ legend }}</h2>
+        <table class="table table-borderless">
+            <tr>
+                <th>{{ form.title.label(class="form-control-label") }}</th>
+                <td>{{ form.title(class="form-control-label form-control-lg") }}</td>
+            </tr>
+            <tr>
+                <th>{{ form.content.label(class="form-control-label") }}</th>
+                <td>{{ form.content(class="form-control-label form-control-lg") }}</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>{{ form.submit() }}</td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+{% endblock content %}
